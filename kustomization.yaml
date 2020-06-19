@@ -1,0 +1,8 @@
+configMapGenerator:
+  - name: microservice-config
+    envs: # https://github.com/kubernetes-sigs/kustomize/pull/1041
+      - env.txt
+generatorOptions:
+  disableNameSuffixHash: true
+resources:
+  - microservice-deployment.yaml
